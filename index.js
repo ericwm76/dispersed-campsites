@@ -52,10 +52,15 @@ var geojson = {
   ]
   };
    
+  geojson.features.forEach(marker => { 
+    var el = document.createElement('div');
+    el.className = 'marker';
+    
+    el.addEventListener('click', function() {
+    window.alert(marker.properties.message);
+    });
 
-   
-  geojson.features.forEach(marker => {    
-    new mapboxgl.Marker()
+    new mapboxgl.Marker(el)
     .setLngLat(marker.geometry.coordinates)
     .setDraggable(true)
     .addTo(map);
