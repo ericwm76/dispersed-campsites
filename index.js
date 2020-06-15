@@ -10,10 +10,54 @@ var map = new mapboxgl.Map({
   zoom: 9
 });
 
-var marker = new mapboxgl.Marker()
-.setLngLat([-106.2425, 38.7494])
-.setDraggable(true)
-.addTo(map);
-
 var nav = new mapboxgl.NavigationControl();
 map.addControl(nav, 'top-left');
+
+var geojson = {
+  'type': 'FeatureCollection',
+  'features': [
+  {
+  'type': 'Feature',
+  'properties': {
+  'message': 'Pikes Peak!',
+  'iconSize': [60, 60]
+  },
+  'geometry': {
+  'type': 'Point',
+  'coordinates': [-105.0423, 38.8409]
+  }
+  },
+  {
+  'type': 'Feature',
+  'properties': {
+  'message': 'Mt. Evans!',
+  'iconSize': [50, 50]
+  },
+  'geometry': {
+  'type': 'Point',
+  'coordinates': [-105.6438, 39.5883]
+  }
+  },
+  {
+  'type': 'Feature',
+  'properties': {
+  'message': 'Mt. Princeton!',
+  'iconSize': [40, 40]
+  },
+  'geometry': {
+  'type': 'Point',
+  'coordinates': [-106.2425, 38.7494]
+  }
+  }
+  ]
+  };
+   
+
+   
+  geojson.features.forEach(marker => {    
+    new mapboxgl.Marker()
+    .setLngLat(marker.geometry.coordinates)
+    .setDraggable(true)
+    .addTo(map);
+  });
+
