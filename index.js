@@ -5,9 +5,12 @@ mapboxgl.accessToken = ACCESS_TOKEN;
 
 var map = new mapboxgl.Map({
   container: 'map',
-  
-
   style: MAPBOX_STYLE,
-  center: [-77.04, 38.907],
-  zoom: 14
+  center: [-106.2425, 38.7494],
+  zoom: 9
 });
+
+var marker = new mapboxgl.Marker()
+.setLngLat([-106.2425, 38.7494])
+.setDraggable(true)
+.addTo(map);
