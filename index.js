@@ -14,3 +14,6 @@ var marker = new mapboxgl.Marker()
 .setLngLat([-106.2425, 38.7494])
 .setDraggable(true)
 .addTo(map);
+
+var nav = new mapboxgl.NavigationControl();
+map.addControl(nav, 'top-left');
