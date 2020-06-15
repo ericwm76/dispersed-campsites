@@ -6,8 +6,8 @@ mapboxgl.accessToken = ACCESS_TOKEN;
 var map = new mapboxgl.Map({
   container: 'map',
   style: MAPBOX_STYLE,
-  center: [-106.2425, 38.7494],
-  zoom: 9
+  center: [-105.7425, 39.17494],
+  zoom: 7
 });
 
 var nav = new mapboxgl.NavigationControl();
