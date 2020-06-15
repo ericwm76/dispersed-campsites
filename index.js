@@ -1,5 +1,5 @@
 const ACCESS_TOKEN = 'pk.eyJ1IjoiZXJpY3dtNzYiLCJhIjoiY2tiZ3AxazVyMHpneDM1bnlzaGhxY2J2NSJ9.ZDHqnx4vzdlkB0m0nBEjEw';
-const MAPBOX_STYLE = 'mapbox://styles/ericwm76/ckbgpu2f739fr1inn2ozkcs59/draft';
+const MAPBOX_STYLE = 'mapbox://styles/ericwm76/ckbgrggqo0lxb1in0fhr3f00j';
 
 mapboxgl.accessToken = ACCESS_TOKEN;
 
